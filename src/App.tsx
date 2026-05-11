@@ -4,6 +4,8 @@
  */
 
 import { motion } from "motion/react";
+import heroImg from "./1.jpeg";
+import logo from "./2.png";
 import { 
   Building2, 
   Globe, 
@@ -98,7 +100,7 @@ export default function App() {
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <img 
-            src="/2.png" 
+            src={logo} 
             alt="Logo" 
             className="h-12 w-auto object-contain"
             referrerPolicy="no-referrer"
@@ -117,7 +119,7 @@ export default function App() {
           {/* Background Image Wrapper */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/1.jpeg" 
+              src={heroImg} 
               alt="Muhammed Enes Yellice Background" 
               className="w-full h-full object-cover opacity-95 grayscale-0"
               referrerPolicy="no-referrer"
