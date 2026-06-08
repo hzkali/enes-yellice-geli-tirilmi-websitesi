@@ -105,7 +105,7 @@ export default function App() {
             className="h-12 w-auto object-contain"
             referrerPolicy="no-referrer"
           />
-          <div className="flex gap-8 text-xs font-mono tracking-wider opacity-60">
+          <div className="flex gap-4 sm:gap-8 text-[11px] sm:text-xs font-mono tracking-wider opacity-60">
             <a href="#ventures" className="hover:opacity-100 transition-opacity">GİRİŞİMLER</a>
             <a href="#expertise" className="hover:opacity-100 transition-opacity">UZMANLIK</a>
             <a href="#vision" className="hover:opacity-100 transition-opacity">VİZYON</a>
@@ -115,48 +115,48 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center px-6 overflow-hidden">
+        <section className="relative min-h-screen flex items-center px-4 sm:px-6 py-20 overflow-hidden">
           {/* Background Image Wrapper */}
           <div className="absolute inset-0 z-0">
             <img 
               src={heroImg} 
               alt="Muhammed Enes Yellice Background" 
-              className="w-full h-full object-cover opacity-95 grayscale-0"
+              className="w-full h-full object-cover opacity-90 grayscale-0"
               referrerPolicy="no-referrer"
             />
             {/* Overlay Gradient for legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/85" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent hidden md:block" />
           </div>
 
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10 w-full pt-20">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10 w-full pt-16 md:pt-20">
             <div className="flex-1 w-full text-center md:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="label-mono text-emerald-500 font-bold mb-6 flex items-center justify-center md:justify-start gap-2">
+                <div className="label-mono text-emerald-500 font-bold mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2 text-[10px] sm:text-xs">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   YAZILIM GELİŞTİRİCİ & GİRİŞİMCİ
                 </div>
-                <h1 className="title-massive mb-8">
-                  <span className="text-[0.9em]">Muhammed Enes</span> <br />
-                  <span className="text-white/40 text-[0.85em]">Yellice</span>
+                <h1 className="title-massive mb-6 md:mb-8">
+                  <span className="text-[0.85em] md:text-[0.9em]">Muhammed Enes</span> <br />
+                  <span className="text-white/40 text-[0.8em] md:text-[0.85em]">Yellice</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed font-light mb-10 mx-auto md:mx-0">
+                <p className="text-lg md:text-2xl text-white/80 max-w-xl leading-relaxed font-light mb-8 md:mb-10 mx-auto md:mx-0">
                   Yazılım yatırımları ve yüksek etkili teknoloji girişimleri aracılığıyla stratejik büyümeye öncelik veriyorum. 
                   Londra ve Ankara merkezli 9+ yıllık mühendislik deneyimi.
                 </p>
-                <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                  <button className="px-8 py-4 bg-emerald-500 text-black font-bold text-sm tracking-widest transition-transform hover:scale-105 active:scale-95">
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                  <button className="w-full sm:w-auto px-8 py-4 bg-emerald-500 text-black font-bold text-sm tracking-widest transition-transform hover:scale-105 active:scale-95">
                     İLETİŞİME GEÇ
                   </button>
                   <div className="flex gap-4">
-                    <button className="p-4 border border-white/20 bg-black/20 hover:border-white/40 backdrop-blur-sm transition-colors">
+                    <button className="p-4 border border-white/20 bg-black/20 hover:border-white/40 backdrop-blur-sm transition-colors rounded-none">
                       <Linkedin size={20} />
                     </button>
-                    <button className="p-4 border border-white/20 bg-black/20 hover:border-white/40 backdrop-blur-sm transition-colors">
+                    <button className="p-4 border border-white/20 bg-black/20 hover:border-white/40 backdrop-blur-sm transition-colors rounded-none">
                       <Github size={20} />
                     </button>
                   </div>
@@ -169,17 +169,17 @@ export default function App() {
         </section>
 
         {/* Philosophy Intro */}
-        <section id="vision" className="py-20 px-6 border-y border-white/5">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <h2 className="text-3xl font-light leading-snug">
+        <section id="vision" className="py-20 px-4 sm:px-6 border-y border-white/5">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <h2 className="text-2xl sm:text-3xl font-light leading-snug text-center md:text-left">
               Her satır kod hesaplanmış bir yatırımdır. Her proje <span className="italic">yüksek riskli bir girişimdir</span>.
             </h2>
-            <div className="space-y-6 text-white/50 leading-relaxed">
+            <div className="space-y-6 text-white/50 leading-relaxed text-center md:text-left">
               <p>
                 Yaklaşımım yalın, ürün odaklı ve sürdürülebilir büyüme için tasarlanmıştır. 
                 Gösteriş amaçlı metrikler yerine değer ve ölçeğe odaklanıyorum.
               </p>
-              <div className="flex gap-12 font-mono text-sm pt-4">
+              <div className="flex gap-6 sm:gap-12 flex-wrap justify-center md:justify-start font-mono text-sm pt-4">
                 <div>
                   <div className="text-emerald-500 font-bold mb-1">09+</div>
                   <div className="opacity-50">Yıllık Deneyim</div>
@@ -198,12 +198,12 @@ export default function App() {
         </section>
 
         {/* Ventures Grid */}
-        <section id="ventures" className="py-32 px-6">
+        <section id="ventures" className="py-20 md:py-32 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-end justify-between mb-16">
-              <div>
-                <div className="label-mono text-emerald-500 mb-4">PORTFOLYO</div>
-                <h2 className="text-5xl font-bold tracking-tight">Aktif Girişimler</h2>
+            <div className="flex items-end justify-between mb-12 md:mb-16">
+              <div className="text-center md:text-left w-full md:w-auto">
+                <div className="label-mono text-emerald-500 mb-2 md:mb-4">PORTFOLYO</div>
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Aktif Girişimler</h2>
               </div>
               <div className="hidden md:block h-px flex-1 mx-12 bg-white/10" />
             </div>
@@ -216,19 +216,19 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="venture-card glass p-8 flex flex-col items-start group"
+                  className="venture-card glass p-6 md:p-8 flex flex-col items-start group"
                 >
                   <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-emerald-500/50 group-hover:text-emerald-500 transition-all">
                     <company.icon size={24} strokeWidth={1.5} />
                   </div>
-                  <div className="flex-1 w-full">
+                  <div className="flex-1 w-full text-left">
                     <div className="flex items-center justify-between mb-2">
-                       <h3 className="text-2xl font-bold">{company.name}</h3>
+                       <h3 className="text-xl md:text-2xl font-bold">{company.name}</h3>
                        <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-40 transition-opacity" />
                     </div>
-                    <div className="flex gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
                       {company.tags.map(tag => (
-                        <span key={tag} className="text-[10px] font-mono tracking-widest bg-white/5 px-2 py-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                        <span key={tag} className="text-[9px] sm:text-[10px] font-mono tracking-widest bg-white/5 px-2 py-1 opacity-50 group-hover:opacity-100 transition-opacity">
                           {tag}
                         </span>
                       ))}
@@ -247,19 +247,19 @@ export default function App() {
         </section>
 
         {/* Expertise / Skills */}
-        <section id="expertise" className="py-32 px-6 bg-white/[0.02]">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
-            <div className="md:col-span-4">
-              <div className="label-mono text-emerald-500 mb-4">TEKNOLOJİ YIĞINI</div>
-              <h2 className="text-4xl font-bold mb-8">Teknik Uzmanlık</h2>
-              <p className="text-white/50 leading-relaxed">
+        <section id="expertise" className="py-20 md:py-32 px-4 sm:px-6 bg-white/[0.02]">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+            <div className="md:col-span-4 text-center md:text-left">
+              <div className="label-mono text-emerald-500 mb-2 md:mb-4">TEKNOLOJİ YIĞINI</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">Teknik Uzmanlık</h2>
+              <p className="text-white/50 leading-relaxed max-w-xl mx-auto md:mx-0">
                 Sistem mimarisi ve ağ optimizasyonundan yüksek performanslı kullanıcı arayüzlerine kadar tam spektrumlu mühendislik.
               </p>
             </div>
             
-            <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 split-list">
+            <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 split-list">
               {SKILLS.map((skillGroup) => (
-                <div key={skillGroup.category} className="space-y-6">
+                <div key={skillGroup.category} className="space-y-4 md:space-y-6 text-left">
                   <div className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-emerald-500">
                       <skillGroup.icon size={16} />
@@ -268,7 +268,7 @@ export default function App() {
                   </div>
                   <ul className="space-y-3">
                     {skillGroup.items.map((item) => (
-                      <li key={item} className="flex items-center gap-4 text-sm text-white/60 font-mono group">
+                      <li key={item} className="flex items-center gap-3 text-sm text-white/60 font-mono group">
                         <span className="w-1.5 h-1.5 bg-white/20 group-hover:bg-emerald-500 transition-colors" />
                         {item}
                       </li>
@@ -281,12 +281,12 @@ export default function App() {
         </section>
 
         {/* Professional Experience Ticker or Footnote */}
-        <section className="py-20 px-6 border-t border-white/5">
+        <section className="py-16 md:py-20 px-4 sm:px-6 border-t border-white/5">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-            <div>
-              <h3 className="label-mono mb-6">Profesyonel Deneyim</h3>
+            <div className="text-left">
+              <h3 className="label-mono mb-6 text-center md:text-left">Profesyonel Deneyim</h3>
               <div className="space-y-8">
-                <div className="border-l-2 border-emerald-500 pl-6 py-1">
+                <div className="border-l-2 border-emerald-500 pl-4 md:pl-6 py-1">
                   <div className="text-xl font-bold">HARP GLOBAL TECHNOLOGY LLC</div>
                   <div className="text-sm opacity-50 mb-4">Kurucu & Full Stack Geliştirici • 2020 — Günümüz</div>
                   <p className="text-white/50 text-sm max-w-xl">
@@ -297,12 +297,12 @@ export default function App() {
               </div>
             </div>
             
-            <div className="flex flex-col justify-end text-right">
+            <div className="flex flex-col justify-end text-center md:text-right items-center md:items-end">
               <div className="label-mono mb-4">BANA ULAŞIN</div>
-              <a href="mailto:css@enesyellice.tr" className="text-2xl md:text-3xl font-light hover:text-emerald-500 transition-colors underline underline-offset-8">
+              <a href="mailto:css@enesyellice.tr" className="text-2xl sm:text-3xl font-light hover:text-emerald-500 transition-colors underline underline-offset-8 break-all">
                 css@enesyellice.tr
               </a>
-              <div className="mt-8 flex justify-end gap-6">
+              <div className="mt-8 flex justify-center md:justify-end gap-6">
                 <a href="#" className="label-mono hover:text-white transition-colors">LinkedIn</a>
                 <a href="#" className="label-mono hover:text-white transition-colors">Twitter</a>
                 <a href="#" className="label-mono hover:text-white transition-colors">Github</a>
